@@ -1,0 +1,227 @@
+header::before{
+  content: "";
+  display: block;
+  width: 200px;
+  background-repeat: no-repeat;
+  top: 0;
+  height: 160px;
+  right: 0;
+  background-image: url("../img/flor.png");
+  position: absolute;
+}
+
+
+.texto-biblico{
+line-height: 1.2;
+padding-top: 100px;
+text-align: center;
+}
+
+.versiculo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nomes{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2A2522;
+}
+
+.nomes p:last-child::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #2A2522;
+}
+
+.convidam{
+  padding-top: 20px;
+}
+
+.convidam, .local{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.convidam p,.local p{
+  text-align: center;
+}
+
+.data{
+  font-weight: 300;
+}
+
+.local{
+padding-top: 20px;
+}
+
+.endereco{
+  font-weight: bold;
+}
+
+.links{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+  padding-bottom: 20px;
+  
+ 
+}
+.links p{
+  text-align: center !important;
+  color: #4C4C4B;
+  font-weight: bold;
+
+}
+
+.links button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+footer{
+  position: absolute;
+}
+
+footer::before{
+  content: "";
+  display: block;
+  width: 95px;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 73px;
+  left: 0;
+  background-image: url("../img/flor-2.png");
+  position: relative;
+}
+
+
+@media(min-width:700px){
+  .nomes{
+    align-items: center;
+  }
+  .convidam, .local{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .convidam p,.local p{
+    text-align: center;
+  }
+
+  .links{
+    justify-content: center;
+  }
+ 
+}
+
+.contador{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  display: inline;
+  background-color: rgba(190, 103, 73, 0.8);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  
+}
+
+#grandeDia{
+  display: none;
+}
+
+#grandeDia.ativo{
+  display: block;
+}
+
+.desativado{
+  display: none;
+  
+}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+  z-index: 9999; /* Garante que o modal esteja na frente de outros elementos */
+
+}
+
+.modal a{
+
+
+  color: #BE6749;
+}
+
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 60%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+/* Estilos para o botão fechar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Estilos para desabilitar o scroll do corpo quando o modal está aberto */
+.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+
+
+.modal-content li{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.local-p{
+
+  padding-bottom: 20px;
+}
+
+.container_tempo.desativado{
+  display: none;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Halant:wght@300;400&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://raw.githubusercontent.com/DouglaseVanessa/convite/main/img/1.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Douglas & Vanessa</title>
+</head>
+<script>
+    document.documentElement.classList.add("js");
+</script>
+
+<body>
+    <header class="container">
+        <div class="contador " data-anime="2000">
+            <div class="contador-container container_tempo"  >
+                    <span class="font-2-a faltam">Faltam</span>
+                    <span class="dias font-1-400"></span>
+                    <span class="titulo font-1-400">dia(s),</span>
+                    <span class="horas font-1-400"></span>
+                    <span class="titulo font-1-400">h(s),</span>
+                    <span class="minutos font-1-400"></span>
+                    <span class="titulo font-1-400">min(s) e</span>
+                    <span class="segundos font-1-400"></span>
+                    <span class="titulo font-1-400">seg(s)</span>
+                </div>
+                <span class="font-1-400" id="grandeDia">
+                    Chegou o grande dia!!
+                </span>
+        </div>
+    </header>
+    <div class="nomes container">
+        <p class="font-1-l texto-biblico" data-anime="200">"Deus mudou o teu caminho até juntares<br>com o meu e guardou a tua vida separando-a para mim.<br>Para onde fores, irei, onde tu repousares, repousarei.<br>Teu Deus será o meu Deus.<br>Teu caminho o meu será"</p>
+        <p class="font-1-l texto-biblico versiculo" data-anime="300">Rute 1:16-17</p>
+        <p class="font-1" data-anime="400"><span class="nome1">Douglas</span></p>
+        <p class="font-2" data-anime="600">and</p>
+        <p class="font-1" data-anime="800"><span class="nome2"> Vanessa</span></p>
+    </div>
+    <div class="convidam container">
+        <p class="font-1-p" data-anime="1000">TE CONVIDAM PARA CELEBRAR SEU<br> CASAMENTO</p>
+        <p class="font-1 data" data-anime="1200">07.09.2024</p>
+    </div>
+    <div class="links font-1-p container" data-anime="1400">
+        <div class="local flex">
+                <button onclick="abrirModal('modal-local')">
+                    <img src="img/local.svg"> <p>Local e<br>Horário</p>
+                </button>
+        </div>
+        <div class="confirmar flex">
+            <a href="https://api.whatsapp.com/send?phone=5511953675683&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada!" target="_blank">
+                <button onclick="abrirModal('modal-presenca')">
+                    <img src="img/whats.svg">  <p>Confimar <br>Presença</p>
+                </button>
+            </a>
+
+        </div>
+        <div class="lista flex">
+            <a href="https://www.querodecasamento.com.br/lista-de-casamento/lista-vanessa-e-douglas" target="_blank">
+
+                <button>
+                    <img src="img/presentes.svg">  <p>Lista de <br>Presentes</p>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div id="modal-local" class="modal" onclick="fecharModal('modal-local')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <span class="close" onclick="fecharModal('modal-local')">&times;</span>
+            <ul class="size-b2">
+                <h2 class="font-1-mm">Local e Horário</h2>
+                <li>
+                    <p class="font-1-m">Local</p>
+                    <p class="font-1-p local-p"> O local para a cerimônia será na Chácara Boas Novas,<br> R. Mateo Galera Garcia Filho, 36 - Parque Monte Libano,<br> Araçoiaba da Serra - SP. </p>
+                    <a href="https://maps.app.goo.gl/GhoU1pisZVhL9WLu5" target="_blank">Clique Aqui para abrir o endereço</a>
+                </li>
+                <li>
+                    <p class="font-1-m">Horário</p>
+                    <p class="font-1-p"> A cerimônia será realizada às 17h, no Sábado, dia 07.09.2024.</p>
+                </li>
+
+                <li>
+                    <p class="font-1-m">Recepção</p>
+                    <p class="font-1-p local-p"> 
+                        Após a cerimônia a recepção será no mesmo local. </p>
+                </li>
+               
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        var scrollTopPos;
+
+        function abrirModal(id) {
+            // Salva a posição atual da barra de rolagem
+            scrollTopPos = window.pageYOffset || document.documentElement.scrollTop;
+            // Adiciona uma classe ao corpo para desabilitar o scroll
+            document.body.classList.add('modal-open');
+            // Define a posição da barra de rolagem para evitar que a página role para o topo
+            document.body.style.top = -scrollTopPos + 'px';
+            document.getElementById(id).style.display = "block";
+        }
+
+        function fecharModal(id) {
+            // Remove a classe do corpo para habilitar o scroll
+            document.body.classList.remove('modal-open');
+            // Restaura a posição da barra de rolagem
+            document.body.style.top = '';
+            window.scrollTo(0, scrollTopPos); // Move a página de volta para a posição original
+            document.getElementById(id).style.display = "none";
+        }
+
+
+
+    </script>
+    <script src="simple-anime.js">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
